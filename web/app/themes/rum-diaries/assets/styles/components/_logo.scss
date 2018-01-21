@@ -1,0 +1,58 @@
+.logo--primary {
+	text-indent: 0;
+	text-decoration: none;
+	animation: fadeLogo 2s 1;
+	svg {
+		max-width: 50px;
+		fill: #000000;
+		transition: 0.3s fill;
+		transition-delay: 0.2s;
+	}
+
+	span {
+		color: #000;
+		@include addREM(padding-left, 55);
+		@include addREM(margin-top, 22);
+		display: block;
+		font-weight: 700;
+		@include font-size(16, 16);
+		transition: 0.3s color;
+		transition-delay: 0.2s;
+
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+@keyframes fadeLogo {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+#top {
+	position: relative;
+}
+
+.__nav-move {
+	.logo--primary {
+
+		svg {
+			fill: #ffffff;
+			transition: 0.3s fill;
+			transition-delay: 0s;
+		}
+
+		span {
+			color: #ffffff;
+			transition: 0.3s color;
+			transition-delay: 0s;
+		}
+
+	}
+}

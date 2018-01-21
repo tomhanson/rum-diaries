@@ -1,0 +1,228 @@
+//overrides from the original theme
+#target, #post, .tile--dummy {
+  pointer-events: none;
+}
+
+#target, #post, .tile.__done:not(.__no-hover):hover:before, .tile.__done:not(.__no-hover):focus:before {
+
+}
+
+#target, #post {
+  //opacity: 0;
+  margin-bottom: 55px;
+  padding: 60px 60px 80px 60px;
+  pointer-events: none;
+  font-size: 0.85em
+}
+
+#target .category, #post .category, #target .title, #post .title, #target .title--sub, #post .title--sub, #target .meta--avatar, #post .meta--avatar, #target .meta--author, #post .meta--author, #target .meta--date, #post .meta--date, #target .share, #post .share {
+  opacity: 1;
+}
+
+#target p, #post p {
+  margin: 1em auto
+}
+
+#target.__show, .__show#post {
+  height: auto;
+  pointer-events: auto
+}
+
+#target .btn--close:hover, #post .btn--close:hover {
+  -webkit-transform: scale(1.1) translateZ(0);
+  transform: scale(1.1) translateZ(0);
+  color: #6078EA
+}
+
+@media screen and (min-width: 481px) {
+  html, body, #main {
+    min-height: 100vh
+  }
+  #target, #post {
+    font-size: 1em
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .top-bar {
+    padding: 22px 15px 10px 60px
+  }
+  .article--content .title {
+    font-size: 2em
+  }
+  #target, #post {
+    padding: 80px 20px 40px
+  }
+}
+
+.article--content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify
+}
+
+.article--content h1, .article--content h2, .article--content h3, .article--content h4, .article--content h5, .article--content h6 {
+  text-align: left
+}
+
+.article--content p {
+  line-height: 1.5
+}
+
+.article--content .meta--date, .article--content .share {
+  margin-left: 25px;
+  margin-right: 25px
+}
+
+.article--content a {
+  padding: 0 2px;
+  border-bottom: 2px solid #6078EA;
+  color: inherit;
+  transition: all 0.15s cubic-bezier(0.46, 0.01, 0.14, 1.35)
+}
+
+.article--content a:hover {
+  color: white;
+  background: #6078EA
+}
+
+.article--content .category {
+  font-size: 1.25em;
+  margin-bottom: 20px;
+  color: #6078EA
+}
+
+
+.article--content .meta {
+  font-size: 1em;
+  margin: 0 auto 2em;
+  max-width: 1200px
+}
+
+.article--content .meta--author {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px
+}
+
+.article--content .meta--author::before {
+  content: 'by ';
+  font-weight: normal
+}
+
+.article--content .meta--avatar {
+  margin: 1em auto
+}
+
+
+.article--body img, .article--body iframe {
+  position: relative;
+  max-width: 100%;
+  display: block;
+  padding: 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+}
+
+.article--body img {
+  height: auto;
+
+  &.alignleft {
+    @include addREM(margin, 5, 10, 5, 0);
+  }
+
+  &.alignright {
+    @include addREM(margin, 5, 0, 5, 10);
+  }
+
+  &.aligncenter {
+    @include addREM(margin, 5);
+  }
+}
+
+.article--body iframe {
+  margin: 1.75em auto
+}
+
+.article--body > p:first-child {
+  font-size: 1.35em
+}
+
+@media screen and (max-width: 480px) {
+  .article--body > p:first-child {
+    font-size: 1.2em
+  }
+}
+
+.article--body > * {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 40px, 0);
+  transform: translate3d(0, 40px, 0);
+  transition: all .5s cubic-bezier(0.55, 0, 0.1, 1)
+}
+
+.__show .article--body > * {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0)
+}
+
+.__show .article--body > *:nth-child(1) {
+  transition-delay: 300ms
+}
+
+.__show .article--body > *:nth-child(2) {
+  transition-delay: 350ms
+}
+
+.__show .article--body > *:nth-child(3) {
+  transition-delay: 400ms
+}
+
+.__show .article--body > *:nth-child(4) {
+  transition-delay: 450ms
+}
+
+.__show .article--body > *:nth-child(5) {
+  transition-delay: 500ms
+}
+
+.__show .article--body > *:nth-child(6) {
+  transition-delay: 550ms
+}
+
+.__show .article--body > *:nth-child(7) {
+  transition-delay: 600ms
+}
+
+.__show .article--body > *:nth-child(8) {
+  transition-delay: 650ms
+}
+
+.__show .article--body > *:nth-child(9) {
+  transition-delay: 700ms
+}
+
+.__show .article--body > *:nth-child(10) {
+  transition-delay: 750ms
+}
+
+blockquote {
+  position: relative;
+  padding: 0 0 0 1.25em;
+  border-left: 6px solid #6078EA;
+  color: #b2b2b2;
+  font-size: 1.25em;
+  font-style: italic;
+  font-family: "Oxygen", Helvetica;
+  font-weight: 300;
+  line-height: 1.6em
+}
+
+@media screen and (max-width: 769px) {
+  blockquote {
+    padding-left: 0.75em;
+    padding-right: 0.25em
+  }
+}

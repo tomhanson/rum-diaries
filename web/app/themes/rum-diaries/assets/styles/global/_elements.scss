@@ -1,0 +1,11 @@
+html {
+	font-family: $font-secondary;
+	font-size: 62.5%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+body {
+	@include font-size(14, 18);
+	font-weight: 300;
+	color: $font-color-primary;
+}

@@ -1,0 +1,9 @@
+.sidebar {
+  width: 100%;
+  grid-area: sidebar;
+  @include addREM(padding, 15);
+  align-self: start;
+  background: #fff;
+  @include addREM(margin-left, 15);
+  @include addREM(margin-top, 15);
+}
